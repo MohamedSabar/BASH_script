@@ -1,0 +1,26 @@
+#!/bin/bash
+read -p "Enter your score " user_Input
+
+
+if [ $user_input == 100 ] then
+   echo "Your grade is AA"
+   
+elif [ $user_input -ge 100  ] then  
+   echo "invaild input"
+	       
+elif [ $user_input -ge 90 -a $user_input -le 100 ] then  
+   echo "Your grade is AA"
+    
+elif [ $user_input -ge 80 -a $user_input -le 90 ] then  
+   echo "Your grade is BA"
+    
+elif [ $user_input -ge 70 -a $user_input -le 80 ] then  
+       echo "Your grade is CC"
+       
+elif [ $user_input -ge 60 -a "$user_input" -le 70 ] then  
+       echo "Your grade is DD"
+	     
+else 
+   echo " Fail "
+
+fi 
