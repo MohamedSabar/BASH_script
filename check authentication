@@ -1,0 +1,13 @@
+#!/bin/sh
+
+username = Admin
+password = admin
+
+read -p " write your username: " input_username;
+read -p "write your password: " input_password;
+
+if [ $username = $input_username -a $password = $input_password ]; then 
+	echo "loged in!"
+else 
+	echo "you have entred Wrong username or password "
+fi
