@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BACKUPTIME=`date +%b-%d-%y`
+
+DESTINATION=/home/user/Desktop/backup-$BACKUPTIME.tar.gz 
+SOURCEFOLDER=/home/user/Desktop/mydata #contains the files that we want to backup
+
+tar -cpzf $DESTINATION $SOURCEFOLDER #create the backup
+
+##for automate the task we use # crontab -e 
+
+#29 0 * * * /bin/bash /path/backup_script.sh
+
