@@ -1,0 +1,28 @@
+steps:
+
+to scan an ip using N map
+frist to Find my IP Address by using this commend
+
+"ip addr"
+
+then with N-map;
+
+using sudo for example:
+
+"sudo nmap -sn 192.168.4.0/24"
+The “/24” tells nmap to scan the entire range of this network.
+
+using sudo ensures it can extract as much information as possible. 
+sn :option  gives you a neat list of the live IP addresses. 
+
+we can use nmap to scan the ports on each device and tells which ones are open.
+
+for example by "nmap 192.168.4.0/24"
+becouse There was a lot of output. we can capture it in a file.
+by using:
+
+"nmap 192.168.4.0/24 > nmap-list.txt"
+
+to gather information we can now list the file with less, and search through it 
+by using this commend 
+"less nmap-list.txt"
